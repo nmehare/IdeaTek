@@ -1,0 +1,10 @@
+{
+    "development":{
+        "PORT":3000,
+        "CONGO_URI":"mongodb://localhost:27017/MEANSTACKDB"
+    },
+    "production":{
+        "PORT":80,
+        "CONGO_URI":"mongodb://localhost:27017/MEANSTACKDB"
+    }
+}
