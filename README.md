@@ -16,7 +16,7 @@ Include title and body to make a post.
     npm start
 
 ---------------------------------------------------------------------------------------------------------------------------
-WEB SERVICES  WEB SERVICES   WEB SERVICES  WEB SERVICES  WEB SERVICES  WEB SERVICES  WEB SERVICES  WEB SERVICES WEB SERVICES 
+WEB SERVICES  WEB SERVICES   WEB SERVICES  WEB SERVICES 
 ---------------------------------------------------------------------------------------------------------------------------
 
 -----1: This project is using a live database from MongoDB Atlas. Database-as-a-service
