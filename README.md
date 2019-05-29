@@ -1,5 +1,5 @@
 [IdeaTek](http://localhost:3000/home)
-It is currently deployed [on Heroku.](https://ideatekbynam.herokuapp.com/home)
+It is currently deployed [on Heroku.](https://ideatekbynam.herokuapp.com)
 
 -----------A full stack forum app using the MEAN stack (All Latest versions).
 (MongoDB, ExpressJS, AngularJS and NodeJS)
