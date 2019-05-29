@@ -3,6 +3,7 @@ It is currently deployed [on Heroku.](https://ideatekbynam.herokuapp.com)
 
 -----------A full stack app using the MEAN stack (All Latest versions).
 (MongoDB, ExpressJS, AngularJS and NodeJS)
+Used JWT for authentication
 
 ----------CONSIDERATIONS
 USER will be able to see all the posts
