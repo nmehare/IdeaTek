@@ -1,0 +1,23 @@
+<div>
+    <h4>Login component</h4>
+    <mat-card layout="row" class="mat-card-cvr">
+        <form (submit)="logIn(loginForm)" #loginForm="ngForm" id="loginForm">
+            <mat-form-field>
+                <input matInput type='text' placeholder='Enter UserName' name="username" ngModel required
+                    #username="ngModel" minlength="5">
+
+            </mat-form-field>
+            <mat-form-field>
+                <input type='password' rows="4" placeholder='Enter Password' matInput name="password" ngModel
+                    required #password="ngModel">
+
+            </mat-form-field>
+            <button mat-raised-button color="primary" type="submit">Log In</button>
+        </form>
+    </mat-card>
+</div>
+
+<div class='alert' *ngIf="serverErrMsg">
+    {{serverErrMsg}}
+
+</div>

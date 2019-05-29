@@ -1,0 +1,43 @@
+<div>
+    <h4>Register component</h4>
+    <mat-card layout="row" class="mat-card-cvr">
+        <form (submit)="register(registerForm)" #registerForm="ngForm" id="registerForm">
+            <mat-form-field>
+                <input matInput type='text' placeholder='Enter UserName' name="username" ngModel required
+                    #username="ngModel" minlength="5">
+                    <mat-error *ngIf="username.errors.forbiddenName">Please enter Unique User Name</mat-error>
+           
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+                <input type='password' placeholder='Enter Password' matInput name="password" ngModel required
+                    #password="ngModel">
+
+            </mat-form-field>
+            <br>
+
+            <mat-form-field>
+                <input type='email' placeholder='Enter Email' matInput name="email" ngModel
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required #email="ngModel">
+                <mat-error *ngIf="email.errors &&(email.touched || email.dirty)">Please enter valid Email</mat-error>
+                <mat-error *ngIf="email.invalid">Please enter Email(Spam) to validate Webservice(SendGrid)</mat-error>
+            </mat-form-field>
+            <br>
+
+            <mat-form-field>
+                <input type='phone' placeholder='Enter Phone' matInput name="phone" ngModel required #phone="ngModel">
+                <mat-error *ngIf="phone.invalid">Please enter Phone to validate Webservice(Nexmo)</mat-error>
+            </mat-form-field>
+            <br>
+            <button mat-raised-button color="primary" type="submit">Register</button>
+        </form>
+    </mat-card>
+</div>
+<div class='alert' *ngIf="serverErrMsg">
+    {{serverErrMsg}}
+
+</div>
+<div class='alert' *ngIf="serverSuccessMsg">
+    {{serverSuccessMsg}}
+
+</div>

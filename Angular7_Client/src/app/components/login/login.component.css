@@ -1,0 +1,26 @@
+mat-form-field,
+input{
+    width:100%;
+    align-content:center;
+    
+}
+
+.main-div{
+    display:inline-block; 
+  }
+
+mat-card-cvr{
+    top:50%; width:100%; text-align:center; position:fixed;
+ }
+
+ div {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    height: 200px;
+  }
+ 

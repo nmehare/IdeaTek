@@ -1,0 +1,82 @@
+<button mat-raised-button color="primary" routerLink="/create">Create Post</button>
+<br>
+<strong>User needs to login to add a Post</strong>
+<br>
+<br>
+<mat-accordion multi='true' *ngIf="posts1.length > 0">
+  <mat-expansion-panel *ngFor="let post of posts1">
+    <mat-expansion-panel-header>
+      {{post.title}}
+    </mat-expansion-panel-header>
+    <p>{{post.body}}</p>
+    <p><span ng-show="post.author" style="float:right;">
+        posted by <span class="text-capitalize">{{post.author}}</span>
+        <!-- Displays time stamp (on large screens) -->
+        <span id="dateTime"> at {{post.createdOn | date : 'h:mm a'}} on {{post.createdOn | date : 'M/d/yy'}}</span>
+      </span></p>
+  </mat-expansion-panel>
+</mat-accordion>
+<p class="mat-body-1" *ngIf="posts1.length <= 0 ">No post added yet</p>
+
+
+
+
+
+<!-- Loops through posts -->
+<!-- <div *ngFor='let post of posts1'>
+
+      <div id="postContainer">
+ 
+        <!-- Displays title and links to comment page -->
+<!-- <a href="#/posts/{{post._id}}"><strong>{{post.title}}</strong></a> -->
+
+<!-- Displays number of comments -->
+<!-- <h6><a class="comments" routerLink="/posts/{{post._id}}"><span style="text-align:left;">{{post.comments.length}} comments</span></a> -->
+
+
+
+<!-- Displays author floated to the right -->
+<!-- <span ng-show="post.author" style="float:right;"> -->
+<!-- posted by <span class="text-capitalize">{{post.author}}</span> -->
+<!-- Displays time stamp (on large screens) -->
+<!-- <span id="dateTime"> at {{post.createdOn | date : 'h:mm a'}} on {{post.createdOn | date : 'M/d/yy'}}</span> -->
+<!-- </span></h6> -->
+<!-- </div> -->
+<!-- </div> -->
+<!-- 
+
+
+<div class="card"> 
+    <div class="card-header">    
+       {{pageTitle}}   
+       </div>    
+         <div class="card-body">     
+            <div class='table-responsive'>       
+                  <table class='table' *ngIf='posts1 && posts1.length'>            
+                      <thead>
+                      <tr> 
+                         
+                        <th>Author</th>   
+                        <th>body</th>
+                        <th>comments</th> 
+                        <th>createdon</th> 
+                        <th>title</th>   
+                        <th>votes</th>
+                      </tr>      
+                     </thead>
+                     <tbody>           
+                                    <tr *ngFor='let sensor of posts1'>   
+                                      <td>{{ sensor.author }}</td>      
+                                      <td>{{ sensor.body }}</td>      
+                                      <td>{{ sensor.comments }}</td>      
+                                      <td>{{ sensor.createdOn }}</td>
+                                      <td>{{ sensor.title }}</td>      
+                                      <td>{{ sensor.votes }}</td>              
+                                    </tr>             
+                      </tbody>            
+            </table>  
+       </div>   
+     </div>     
+   </div> -->
+<div>
+</div>
