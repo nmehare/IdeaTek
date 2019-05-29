@@ -14,7 +14,6 @@ var sgTransport = require('nodemailer-sendgrid-transport');
 
 //NPM START
 //connect to database (currently using a live database.)
-//mongoose.connect('mongodb://sschapma:qwerty@ds025603.mlab.com:25603/heroku_d719vzc0',(err) => {
     mongoose.connect('mongodb+srv://nmehare:beautiful12@ideatekcluster-cudia.mongodb.net/test?retryWrites=true', {useNewUrlParser: true},(err) => {
 
     if (!err){
@@ -44,10 +43,6 @@ require('./config/passport');
 var routes = require('./routes/index');
 var app = express();//in order to work with express
 app.use(cors());
-// view engine setup
-//app.set('views', path.join(__dirname, 'views'));
-//app.set('view engine', 'ejs');
-//app.use to configure the middleware fr application
 app.use(favicon(__dirname + '/public/images/favicon.png'));
 app.use(logger('dev'));
 app.use(bodyParser.json());//bodyparser so that we can pass json data to this app
